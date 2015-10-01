@@ -130,17 +130,24 @@ class RijksFavoriteArtworksCollectionVC: UIViewController, UICollectionViewDataS
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        // Navigate to the RijksArtworkDetail view controller
-        let storyboard = self.storyboard
-        let nextVC = storyboard!.instantiateViewControllerWithIdentifier("RijksArtworkDetailVC") as! RijksArtworkDetailVC
-        nextVC.fileName    = localFavoriteArtworks[indexPath.row].fileName
-        nextVC.artistName  = localFavoriteArtworks[indexPath.row].artist
-        nextVC.artworkName = localFavoriteArtworks[indexPath.row].title
-        
+        // Navigate to the RijksArtworkDetail view controller, fixed or scrollable image, depending on Settings parameter
         navigationItem.title = "" // This ensures that the title of the back button of the next VC is "<" !! Otherwise it is too long.
         // Get it back in "viewWillAppear" when returning.
         
-        self.navigationController!.pushViewController(nextVC, animated: false)
+        let storyboard = self.storyboard
+        if Rijks.sharedInstance.imageScrollable() {
+            let nextVC = storyboard!.instantiateViewControllerWithIdentifier(Rijks.Constants.detailScrollImageVC) as! RijksArtworkDetailScrollVC
+            nextVC.fileName    = localFavoriteArtworks[indexPath.row].fileName
+            nextVC.artistName  = localFavoriteArtworks[indexPath.row].artist
+            nextVC.artworkName = localFavoriteArtworks[indexPath.row].title
+            self.navigationController!.pushViewController(nextVC, animated: false)
+        } else {
+            let nextVC = storyboard!.instantiateViewControllerWithIdentifier(Rijks.Constants.detailFixedImageVC) as! RijksArtworkDetailVC
+            nextVC.fileName    = localFavoriteArtworks[indexPath.row].fileName
+            nextVC.artistName  = localFavoriteArtworks[indexPath.row].artist
+            nextVC.artworkName = localFavoriteArtworks[indexPath.row].title
+            self.navigationController!.pushViewController(nextVC, animated: false)
+        }
         
     } // ========== End of "collectionView.didSelectItemAtIndexPath" ===============================================================================
     

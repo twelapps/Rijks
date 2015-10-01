@@ -32,6 +32,9 @@
 		A85458471BB3E17E003DB099 /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85458461BB3E17E003DB099 /* CoreDataStackManager.swift */; settings = {ASSET_TAGS = (); }; };
 		A854584A1BB3FA43003DB099 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A85458481BB3FA43003DB099 /* Model.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		A86DE7171BB594E9008425F0 /* RijksFavoriteArtworksCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86DE7161BB594E9008425F0 /* RijksFavoriteArtworksCollectionVC.swift */; settings = {ASSET_TAGS = (); }; };
+		A89467C81BBD229F00844BD2 /* RijksArtworkDetailScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89467C71BBD229F00844BD2 /* RijksArtworkDetailScrollVC.swift */; settings = {ASSET_TAGS = (); }; };
+		A89467CA1BBD40A900844BD2 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = A89467C91BBD40A900844BD2 /* Settings.png */; settings = {ASSET_TAGS = (); }; };
+		A89467CC1BBD429D00844BD2 /* RijksSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89467CB1BBD429D00844BD2 /* RijksSettingsVC.swift */; settings = {ASSET_TAGS = (); }; };
 		A8B482431BB2941200CE9134 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B482421BB2941200CE9134 /* Artist.swift */; settings = {ASSET_TAGS = (); }; };
 		A8B482451BB2959F00CE9134 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B482441BB2959F00CE9134 /* Artwork.swift */; settings = {ASSET_TAGS = (); }; };
 		A8B482471BB2990300CE9134 /* RijksDBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B482461BB2990300CE9134 /* RijksDBClient.swift */; settings = {ASSET_TAGS = (); }; };
@@ -86,6 +89,9 @@
 		A85458461BB3E17E003DB099 /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
 		A85458491BB3FA43003DB099 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A86DE7161BB594E9008425F0 /* RijksFavoriteArtworksCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RijksFavoriteArtworksCollectionVC.swift; sourceTree = "<group>"; };
+		A89467C71BBD229F00844BD2 /* RijksArtworkDetailScrollVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RijksArtworkDetailScrollVC.swift; sourceTree = "<group>"; };
+		A89467C91BBD40A900844BD2 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		A89467CB1BBD429D00844BD2 /* RijksSettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RijksSettingsVC.swift; sourceTree = "<group>"; };
 		A8B482421BB2941200CE9134 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		A8B482441BB2959F00CE9134 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		A8B482461BB2990300CE9134 /* RijksDBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RijksDBClient.swift; sourceTree = "<group>"; };
@@ -211,7 +217,9 @@
 				A8DE7B541BB41A9B0023B251 /* RijksArtworksCollectionVC.swift */,
 				A86DE7161BB594E9008425F0 /* RijksFavoriteArtworksCollectionVC.swift */,
 				A81034401BB7193600445CD2 /* RijksArtworkDetailVC.swift */,
+				A89467C71BBD229F00844BD2 /* RijksArtworkDetailScrollVC.swift */,
 				A8EE136E1BBBE8EA00311941 /* RijksWhatIsHotVC.swift */,
+				A89467CB1BBD429D00844BD2 /* RijksSettingsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 				A8C2253D1BB16B1C00324AA1 /* Favorites Artists.png */,
 				A8B5FD9D1BB08B4F000050FD /* Directions.png */,
 				A8EE136C1BBBE5F400311941 /* HotNews.png */,
+				A89467C91BBD40A900844BD2 /* Settings.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -331,6 +340,7 @@
 				A84DBEC71B2CC6EE00E7A069 /* LaunchScreen.xib in Resources */,
 				A84DBEC41B2CC6EE00E7A069 /* Images.xcassets in Resources */,
 				A8B5FD9E1BB08B4F000050FD /* Directions.png in Resources */,
+				A89467CA1BBD40A900844BD2 /* Settings.png in Resources */,
 				A821C5501BB045D2001BA785 /* Favorite.png in Resources */,
 				A8EE136D1BBBE5F400311941 /* HotNews.png in Resources */,
 				A810343F1BB7127700445CD2 /* Unfavorite-Blue.png in Resources */,
@@ -359,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A89467C81BBD229F00844BD2 /* RijksArtworkDetailScrollVC.swift in Sources */,
 				A8B482451BB2959F00CE9134 /* Artwork.swift in Sources */,
 				A82902B81BB2CCDE00572DE4 /* RijksArtistPickerVC.swift in Sources */,
 				A81034411BB7193600445CD2 /* RijksArtworkDetailVC.swift in Sources */,
@@ -375,6 +386,7 @@
 				A81DE3481BB97C3F009137A8 /* Readme.md in Sources */,
 				A86DE7171BB594E9008425F0 /* RijksFavoriteArtworksCollectionVC.swift in Sources */,
 				A85458471BB3E17E003DB099 /* CoreDataStackManager.swift in Sources */,
+				A89467CC1BBD429D00844BD2 /* RijksSettingsVC.swift in Sources */,
 				A810343D1BB7055300445CD2 /* RijksFavoriteArtworkCollViewCell.swift in Sources */,
 				A84DBEBD1B2CC6EE00E7A069 /* AppDelegate.swift in Sources */,
 				A821C5421BB01315001BA785 /* RijksWebsite.swift in Sources */,

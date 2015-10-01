@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/CoreDataStackManager.swift"
-            timestampString = "465315882.56883"
+            timestampString = "465394509.49461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "persistentStoreCoordinator"
             landmarkType = "19">
          </BreakpointContent>
@@ -312,11 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/CoreDataStackManager.swift"
-            timestampString = "464785721.352462"
+            timestampString = "465394509.49461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "managedObjectModel"
             landmarkType = "19">
             <Locations>
@@ -405,11 +405,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/CoreDataStackManager.swift"
-            timestampString = "464785724.547734"
+            timestampString = "465394509.49461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "persistentStoreCoordinator"
             landmarkType = "19">
             <Locations>
@@ -498,11 +498,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/CoreDataStackManager.swift"
-            timestampString = "465315882.56883"
+            timestampString = "465394509.49461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "managedObjectContext"
             landmarkType = "19">
             <Locations>
@@ -591,11 +591,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/CoreDataStackManager.swift"
-            timestampString = "465315882.56883"
+            timestampString = "465394509.49461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "saveContext()"
             landmarkType = "5">
          </BreakpointContent>
@@ -607,11 +607,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/CoreDataStackManager.swift"
-            timestampString = "465315882.56883"
+            timestampString = "465394509.49461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "managedObjectContext"
             landmarkType = "19">
          </BreakpointContent>
@@ -623,11 +623,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/CoreDataStackManager.swift"
-            timestampString = "465315882.56883"
+            timestampString = "465394509.49461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "managedObjectContext"
             landmarkType = "19">
          </BreakpointContent>
@@ -639,11 +639,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/CoreDataStackManager.swift"
-            timestampString = "465315882.56883"
+            timestampString = "465394509.49461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "managedObjectContext"
             landmarkType = "19">
          </BreakpointContent>
@@ -655,11 +655,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/CoreDataStackManager.swift"
-            timestampString = "465315882.56883"
+            timestampString = "465394509.49461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "managedObjectContext"
             landmarkType = "19">
          </BreakpointContent>
@@ -671,11 +671,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/CoreDataStackManager.swift"
-            timestampString = "465315882.56883"
+            timestampString = "465394509.49461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "managedObjectContext"
             landmarkType = "19">
          </BreakpointContent>
@@ -1023,7 +1023,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/RijksMainVC.swift"
-            timestampString = "465321754.883789"
+            timestampString = "465394509.49461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
@@ -1039,11 +1039,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/RijksMainVC.swift"
-            timestampString = "465321754.883789"
+            timestampString = "465394509.49461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1055,11 +1055,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/RijksMainVC.swift"
-            timestampString = "465321754.883789"
+            timestampString = "465388497.812044"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "fetchAllArtists()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1071,11 +1071,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/RijksMainVC.swift"
-            timestampString = "465321754.883789"
+            timestampString = "465388497.812044"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "sharedContext"
             landmarkType = "19">
             <Locations>
@@ -1372,11 +1372,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/Rijks.swift"
-            timestampString = "465315882.56883"
+            timestampString = "465391734.142378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "processOneImage(_:completionHandler:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1580,11 +1580,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/RijksArtworksCollectionVC.swift"
-            timestampString = "465332342.000739"
+            timestampString = "465391734.142378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
             landmarkName = "RijksArtworksCollectionVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -1596,11 +1596,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rijks/RijksArtworksCollectionVC.swift"
-            timestampString = "465332342.000739"
+            timestampString = "465391734.142378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
+            startingLineNumber = "346"
+            endingLineNumber = "346"
             landmarkName = "collectionView(_:layout:insetForSectionAtIndex:)"
             landmarkType = "5">
          </BreakpointContent>

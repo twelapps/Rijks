@@ -24,6 +24,25 @@ class Rijks: NSObject {
     typealias CompletionHandlerOneImage  = (success: Bool, error: String?) -> Void
     typealias CompletionHandlerHotMsg    = (success: Bool, hotMessageReturned: String, error: String?) -> Void
     
+    private var filePathImageScrollable: String {
+        let manager = NSFileManager.defaultManager()
+        let url = manager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first as NSURL!
+        return url.URLByAppendingPathComponent(Rijks.Constants.imageScrollableArch).path!
+    }
+    
+    func imageScrollable () -> Bool {
+        
+        if let imageScrollable = NSKeyedUnarchiver.unarchiveObjectWithFile(filePathImageScrollable) as? Bool {
+            return imageScrollable
+        } else {
+            return Rijks.Constants.imageScrollableDefault
+        }
+    }
+    
+    func setImageScrollable (imageScrollable: Bool) {
+        NSKeyedArchiver.archiveRootObject(imageScrollable, toFile: filePathImageScrollable)
+    }
+    
     func processOneImage (artwork: Artwork?, completionHandler: CompletionHandlerOneImage) {
         
         /* Initialize session and url */
@@ -89,7 +108,7 @@ class Rijks: NSObject {
     func createDir () {
         
         var documentsdir = dirPaths[0] // The Documents Directory where to store our files
-        documentsdir += "/Rijks-images"
+        documentsdir += Rijks.Constants.directoryExtension
         
         // Create Rijks-images directory to contain our downloaded images. Ignore error since it will only tell you
         // that directory already exists or a severe error occurred from which we cannot recover anyway
@@ -103,7 +122,7 @@ class Rijks: NSObject {
     func addImage (fileName: String, fileContents: NSData) {
         
         var documentsdir = dirPaths[0] // The Documents Directory where to store our files
-        documentsdir += "/Rijks-images"
+        documentsdir += Rijks.Constants.directoryExtension
         
         // Add the imagefile
         let filePath = documentsdir + "/" + fileName
@@ -113,7 +132,7 @@ class Rijks: NSObject {
     func readImage (fileName: String) -> NSData? {
         
         var documentsdir = dirPaths[0] // The Documents Directory where to store our files
-        documentsdir += "/Rijks-images"
+        documentsdir += Rijks.Constants.directoryExtension
         
         // Read the imagefile
         let filePath = documentsdir + "/" + fileName
@@ -134,7 +153,7 @@ class Rijks: NSObject {
     func removeImage (fileName: String) {
         
         var documentsdir = dirPaths[0] // The Documents Directory where to store our files
-        documentsdir += "/Rijks-images"
+        documentsdir += Rijks.Constants.directoryExtension
         
         // Remove the imagefile
         let filePath = documentsdir + "/" + fileName

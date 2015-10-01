@@ -23,6 +23,7 @@ class RijksMainVC: UIViewController {
     @IBOutlet weak var FavoriteArtworks       : UIBarButtonItem!
     @IBOutlet weak var HotNews                : UIBarButtonItem!
     @IBOutlet weak var Directions             : UIBarButtonItem!
+    @IBOutlet weak var settingsButton         : UIBarButtonItem!
     @IBOutlet weak var messageField  : UITextView!
     
     // MARK: - Core Data Convenience
@@ -51,9 +52,8 @@ class RijksMainVC: UIViewController {
         {
             try results = sharedContext.executeFetchRequest(fetchRequest) as! [Artist]
             
-        } catch let error as NSError {
-            // Report any error we got.
-            print("Error in fectchAllArtists(): \(error)")
+        } catch _ as NSError {
+            // Don't report on this error
         }
         
         // Return the results, cast to an array of Artist objects
@@ -86,10 +86,11 @@ class RijksMainVC: UIViewController {
 
         // Tabbar, navigation buttons: set rendering mode to "always original",
         // the default is that the image is just used as a template and (in this case) is colored blue
-        RijksWebSiteSafariImage.image    = UIImage(named: "Safari.png")!.imageWithRenderingMode(.AlwaysOriginal)
-        Favorites.image                  = UIImage(named: "Favorites Artists.png")!.imageWithRenderingMode(.AlwaysOriginal)
-        HotNews.image                    = UIImage(named: "HotNews.png")!.imageWithRenderingMode(.AlwaysOriginal)
-        Directions.image                 = UIImage(named: "Directions.png")!.imageWithRenderingMode(.AlwaysOriginal)
+        RijksWebSiteSafariImage.image    = UIImage(named: Rijks.Constants.safariImage)!.imageWithRenderingMode(.AlwaysOriginal)
+        Favorites.image                  = UIImage(named: Rijks.Constants.favArtistsImage)!.imageWithRenderingMode(.AlwaysOriginal)
+        HotNews.image                    = UIImage(named: Rijks.Constants.hotNewsImage)!.imageWithRenderingMode(.AlwaysOriginal)
+        Directions.image                 = UIImage(named: Rijks.Constants.directionsImage)!.imageWithRenderingMode(.AlwaysOriginal)
+        settingsButton.image             = UIImage(named: Rijks.Constants.settingsImage)!.imageWithRenderingMode(.AlwaysOriginal)
         
         navigationTitle = navigationItem.title! // Save the title
         
@@ -132,7 +133,7 @@ class RijksMainVC: UIViewController {
         } else {
             // Activate favorite artworks button
             FavoriteArtworks.enabled = true
-            FavoriteArtworks.image   = UIImage(named: "Favorites Artworks.png")!.imageWithRenderingMode(.AlwaysOriginal)
+            FavoriteArtworks.image   = UIImage(named: Rijks.Constants.favArtworksImage)!.imageWithRenderingMode(.AlwaysOriginal)
         }
         
         /*************************************************************
@@ -181,7 +182,7 @@ class RijksMainVC: UIViewController {
         
         // Navigate to the RijksWebSite view controller
         let storyboard = self.storyboard
-        let nextVC = storyboard!.instantiateViewControllerWithIdentifier("RijksWebsite")
+        let nextVC = storyboard!.instantiateViewControllerWithIdentifier(Rijks.Constants.RijksWebsiteVC)
         self.navigationController!.pushViewController(nextVC, animated: false)
     }
 
@@ -193,7 +194,7 @@ class RijksMainVC: UIViewController {
         
         // Navigate to the RijksFavoriteArtists view controller
         let storyboard = self.storyboard
-        let nextVC = storyboard!.instantiateViewControllerWithIdentifier("RijksFavoriteArtistsVC") as! RijksFavoriteArtistsVC
+        let nextVC = storyboard!.instantiateViewControllerWithIdentifier(Rijks.Constants.favArtistsVC) as! RijksFavoriteArtistsVC
         nextVC.artists = artists
         self.navigationController!.pushViewController(nextVC, animated: false)
     }
@@ -205,7 +206,7 @@ class RijksMainVC: UIViewController {
         
         // Navigate to the RijksFavoriteArtworksCollection view controller
         let storyboard = self.storyboard
-        let nextVC = storyboard!.instantiateViewControllerWithIdentifier("RijksFavoriteArtworksCollectionVC") as! RijksFavoriteArtworksCollectionVC
+        let nextVC = storyboard!.instantiateViewControllerWithIdentifier(Rijks.Constants.favArtworksCollVC) as! RijksFavoriteArtworksCollectionVC
         nextVC.artists = artists
         self.navigationController!.pushViewController(nextVC, animated: false)
     }
@@ -215,9 +216,9 @@ class RijksMainVC: UIViewController {
         navigationItem.title = "" // This ensures that the title of the back button of the next VC is "<" !! Otherwise it is too long.
         // Get it back in "viewWillAppear" when returning.
         
-        // Navigate to the RijksWebSite view controller
+        // Navigate to the hot news view controller
         let storyboard = self.storyboard
-        let nextVC = storyboard!.instantiateViewControllerWithIdentifier("RijksWhatIsHotVC")
+        let nextVC = storyboard!.instantiateViewControllerWithIdentifier(Rijks.Constants.hotMessagesVC)
         self.navigationController!.pushViewController(nextVC, animated: false)
         
     }
@@ -225,6 +226,18 @@ class RijksMainVC: UIViewController {
     @IBAction func GetDirections(sender: UIBarButtonItem) {
         
         getDirection()
+    }
+    
+    @IBAction func settingsFunc (sender: UIBarButtonItem) {
+        
+        navigationItem.title = "" // This ensures that the title of the back button of the next VC is "<" !! Otherwise it is too long.
+        // Get it back in "viewWillAppear" when returning.
+        
+        // Navigate to the settings view controller
+        let storyboard = self.storyboard
+        let nextVC = storyboard!.instantiateViewControllerWithIdentifier(Rijks.Constants.settingsVC)
+        self.navigationController!.pushViewController(nextVC, animated: false)
+        
     }
     
 }

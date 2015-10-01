@@ -12,6 +12,7 @@ Main view:
     o  third (middle) button is not visible initially and if there are no favourite artworks at all, only after “favourizing” at least one artwork
     o  button "hot news", left of rightmost button: a hot message is picked up from my own server at www.twelker.nl
     o  rightmost button: directions to the Rijksmuseum. Selecting this option navigates to a map displaying (when feasible) the route between your current location and the museum. Using iOS 9 feature to return to the original app in the left hand upper corner: “< Return to Rijks” option. 
+    o  top right button: navigates to set-up menu
 - Round robin of 
     o  5 pre-set images if no favourite artworks are defined
     o  image of the Rijksmuseum building and all favourite artworks if at least one artwork has been "favourized" 
@@ -36,8 +37,11 @@ Favorite artworks collection view
 - Selecting “<“ navigates back to the main view. 
 
 Detailed artwork view
-- Selecting any artwork (either in the “artworks collection view” or in the “Favourite artworks collection view") navigates to the detailed artwork view, showing a larger image of the selected artwork.
+- Selecting any artwork (either in the “artworks collection view” or in the “Favourite artworks collection view") navigates to the detailed artwork view, showing a larger image of the selected artwork. Depending on the option set in the set-up menu, the image is scrollable or just fixed.
 - Selecting “<“ navigates back to the appropriate collection view. 
+
+Set-up menu
+- Switch to define whether the image in the "Detailed artwork view" is scrollable or just fixed. Default is scrollable. The parameter is stored in UserDefaults.
 
 All artists, artworks and favourite settings are persistent in Core Data. If the images were not retrieved previously, FetchResultsController is used to manage the display of artwork images in the Artworks collection view. Once retrieved from the web, these images are stored on the local “disk”. They will be removed if the user removes an artist from the app.
 

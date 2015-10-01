@@ -54,7 +54,7 @@ class RijksFavoriteArtistsVC: UITableViewController, RijksArtistPickerVCDelegate
         
         // Navigate to the GetDirectionsViewController
         let storyboard = self.storyboard
-        let nextVC = storyboard!.instantiateViewControllerWithIdentifier("RijksArtistPickerVC") as! RijksArtistPickerVC
+        let nextVC = storyboard!.instantiateViewControllerWithIdentifier(Rijks.Constants.artistPickerVC) as! RijksArtistPickerVC
         nextVC.delegate = self // For returning output result
         
         navigationItem.title = "" // This ensures that the title of the back button of the next VC is "<" !! Otherwise it is too long.
@@ -121,7 +121,7 @@ class RijksFavoriteArtistsVC: UITableViewController, RijksArtistPickerVCDelegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let nextVC = storyboard!.instantiateViewControllerWithIdentifier("RijksArtworksCollectionVC") as! RijksArtworksCollectionVC
+        let nextVC = storyboard!.instantiateViewControllerWithIdentifier(Rijks.Constants.artworksCollVC) as! RijksArtworksCollectionVC
         
         nextVC.artist  = artists[indexPath.row]
         nextVC.artists = artists
@@ -151,13 +151,13 @@ class RijksFavoriteArtistsVC: UITableViewController, RijksArtistPickerVCDelegate
                     deleteArtist(artist, index: indexPath)
                 } else { // Not all artworks present yet, disallow removing artist and show alert
                     
-                    let alert = UIAlertController(title: "Oops!", message:"Shouldn't remove artist until all artworks are downloaded", preferredStyle: .Alert)
-                    let action = UIAlertAction(title: "OK", style: .Default) { _ in
+                    let alert = UIAlertController(title: Rijks.Constants.alertTitle, message:Rijks.Constants.alertMsg, preferredStyle: .Alert)
+                    let action = UIAlertAction(title: Rijks.Constants.alertActionOK, style: .Default) { _ in
                         // Put here any code that you would like to execute when
                         // the user taps that OK button (may be empty in your case if that's just
                         // an informative alert)
                     }
-                    let action2 = UIAlertAction(title: "Still delete", style: .Default) { _ in
+                    let action2 = UIAlertAction(title: Rijks.Constants.alertActionNotOK, style: .Default) { _ in
                         // Put here any code that you would like to execute when
                         // the user taps that "Still delete" button
                         self.deleteArtist(artist, index: indexPath)

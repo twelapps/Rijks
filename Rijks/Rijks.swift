@@ -202,6 +202,7 @@ class Rijks: NSObject {
         case .Phone:       typeOfDevice = Rijks.Constants.iPhone
         case .Pad:         typeOfDevice = Rijks.Constants.iPad
         case .Unspecified: typeOfDevice = ""
+        default:           typeOfDevice = ""
         }
         
         return typeOfDevice
